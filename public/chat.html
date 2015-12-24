@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Socket.io Basics</title>
-	<link rel="stylesheet" href="/css/pure-min.css">
+	<link rel="stylesheet" href="/css/kube.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<style type="text/css">
@@ -13,8 +13,8 @@
 	</style>
 </head>
 <body>
-	<a class="pure-button" style="maring-bottom: 10px" href="/index.html">
-	    <i class="fa fa-cog"></i>
+	<a href="/index.html" class="btn" outline small upper style="margin-bottom: 15px">
+		<i class="fa fa-cog"></i>
 	    Change Name
 	</a>
 
@@ -22,12 +22,16 @@
 		<!-- Messages end up here -->
 	</div>
 
-	<form class="pure-form" id="message-form">
-	    <fieldset>
+	<form class="forms" id="message-form">
+	    <!-- <fieldset>
 	        <input type="text" placeholder="Message" name="message">
 
-	        <button type="submit" class="pure-button pure-button-primary">Submit</button>
-	    </fieldset>
+	        <button type="submit" class="pure-button pure-button-primary">Send</button>
+	    </fieldset> -->
+
+	    <input type="text" placeholder="Message" name="message" class="width-4">
+
+	    <button type="primary" style="margin-top: 10px">Send</button>
 	</form>
 
 	<script src="/js/jquery-2.1.4.min.js"></script>
