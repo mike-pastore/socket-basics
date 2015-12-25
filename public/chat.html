@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Chatroom</title>
 	<link rel="stylesheet" href="/css/kube.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -23,15 +24,9 @@
 	</div>
 
 	<form class="forms" id="message-form">
-	    <!-- <fieldset>
-	        <input type="text" placeholder="Message" name="message">
+	    <input type="text" placeholder="Message" name="message" class="width-4" autocomplete="off">
 
-	        <button type="submit" class="pure-button pure-button-primary">Send</button>
-	    </fieldset> -->
-
-	    <input type="text" placeholder="Message" name="message" class="width-4">
-
-	    <button type="primary" style="margin-top: 10px">Send</button>
+	    <button type="primary" style="margin-top: 5px" class="width-4">Send</button>
 	</form>
 
 	<script src="/js/jquery-2.1.4.min.js"></script>
