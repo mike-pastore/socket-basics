@@ -18,6 +18,14 @@ socket.on('message', function (message) {
 		+ ' [' +  message.name+ '] </strong><br>' + message.text + '</p>');
 });
 
+// strip + marks form multi-word names
+function stripPlus(name) {
+    return name.split('+').join(' ');
+}
+
+// call stripPlus
+name = stripPlus(name);
+
 // handles submission of new message
 var $form = jQuery('#message-form');
 
