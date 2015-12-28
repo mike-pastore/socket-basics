@@ -24,7 +24,15 @@ function sendCurrentUsers (socket) {
 		var userInfo = clientInfo[socketId];
 
 		if (info.room === userInfo.room) {
-			users.push(userInfo.name);
+			var postedName;
+			
+			if (info.name === userInfo.name) {
+				postedName = userInfo.name + ' (you)';
+			} else {
+				postedName = userInfo.name;
+			}
+
+			users.push(postedName);
 		}
 	});
 
@@ -35,20 +43,31 @@ function sendCurrentUsers (socket) {
 	});
 }
 
-// sends your name
-function sendSelf (socket) {
-	var info = clientInfo[socket.id];
+// // checks user's name
+// function checkSelf (user) {
+// 	var name = user.name;
 
-	if (typeof info === 'undefined') {
-		return;
-	}
+// 	if (typeof name === 'undefined') {
+// 		return;
+// 	} else if (name )
 
-	socket.emit('message', {
-		name: ' *_* ',
-		text: 'You are [' + info.name + ']',
-		timestamp: moment().valueOf()
-	})
-}
+
+// }
+
+// // sends your name
+// function sendSelf (socket) {
+// 	var info = clientInfo[socket.id];
+
+// 	if (typeof info === 'undefined') {
+// 		return;
+// 	}
+
+// 	socket.emit('message', {
+// 		name: ' *_* ',
+// 		text: 'You are [' + info.name + ']',
+// 		timestamp: moment().valueOf()
+// 	})
+// }
 
 io.on('connection', function (socket) {
 	console.log('User connected via socket.io!');
