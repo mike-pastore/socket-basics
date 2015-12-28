@@ -16,3 +16,9 @@ h1 {
 .room-title {
 	text-align: left;
 }
+
+.messages > p {
+	-webkit-animation-duration: 0.25s;
+  	/*-webkit-animation-delay: 2s;*/
+  	/*-webkit-animation-iteration-count: infinite;*/
+}
