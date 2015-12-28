@@ -43,32 +43,6 @@ function sendCurrentUsers (socket) {
 	});
 }
 
-// // checks user's name
-// function checkSelf (user) {
-// 	var name = user.name;
-
-// 	if (typeof name === 'undefined') {
-// 		return;
-// 	} else if (name )
-
-
-// }
-
-// // sends your name
-// function sendSelf (socket) {
-// 	var info = clientInfo[socket.id];
-
-// 	if (typeof info === 'undefined') {
-// 		return;
-// 	}
-
-// 	socket.emit('message', {
-// 		name: ' *_* ',
-// 		text: 'You are [' + info.name + ']',
-// 		timestamp: moment().valueOf()
-// 	})
-// }
-
 io.on('connection', function (socket) {
 	console.log('User connected via socket.io!');
 
@@ -103,8 +77,6 @@ io.on('connection', function (socket) {
 
 		if (message.text === '/users') {
 			sendCurrentUsers(socket);
-		} else if (message.text === '/whoami') {
-			sendSelf(socket);
 		} else {
 			message.timestamp = moment().valueOf();
 			io.to(clientInfo[socket.id].room).emit('message', message);
