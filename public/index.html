@@ -6,35 +6,32 @@
 	<title>Join Chat</title>
 	<link rel="stylesheet" href="/css/kube.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-	<style type="text/css">
-		body {
-			margin: 10px;
-		}
-	</style>
+	<link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-	<row>
-	<column cols="8">
-	<h1>Join Chat</h1>
+<div class="vertical-center">
+	<row centered>
+		<column cols="4">
+			<h1>Join Chat</h1>
 
-	<form class="forms" action="/chat.html">
-		<section>
-			<label for="room">Chatroom Name</label>
-			<div class="input-prepend width-6">
-		        <span><i class="fa fa-home"></i></span>
-		        <input type="text" name="room" value="" autocomplete="off" placeholder="Room"/>
-		    </div>
+			<form class="forms" action="/chat.html">
+				<section>
+					<label for="name">Your Display Name</label>
+					<div class="input-prepend">
+				        <span><i class="fa fa-user"></i></span>
+				        <input type="text" name="name" value="" autocomplete="off" placeholder="Name"/>
+				    </div>
 
-			<label for="name">Your Display Name</label>
-			<div class="input-prepend width-6">
-		        <span><i class="fa fa-user"></i></span>
-		        <input type="text" name="name" value="" autocomplete="off" placeholder="Name"/>
-		    </div>
-		</section>
-		<button type="primary">Submit</button>
-	</form>
-	</column>
+				    <label for="room">Chatroom Name</label>
+					<div class="input-prepend">
+				        <span><i class="fa fa-comment"></i></span>
+				        <input type="text" name="room" value="" autocomplete="off" placeholder="Room"/>
+				    </div>
+				</section>
+				<button type="primary" class="width-12">Join Chat</button>
+			</form>
+		</column>
 	</row>
+	</div>
 </body>
 </html>
