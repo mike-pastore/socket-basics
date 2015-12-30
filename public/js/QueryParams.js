@@ -7,10 +7,10 @@ function getQueryVariable(variable) {
         	// regex to replace + with space BEFORE decoding
             var result = decodeURIComponent(pair[1].replace(/\+/g, " "));
             // regex to strip script tags
-            // result = result.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi);
+            result = result.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi);
             
             // BETTER mentioned by George: rebuild DOM, remove script tags
-            return $.parseHTML(result);
+            return result;
         }
     }
     
