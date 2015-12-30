@@ -28,12 +28,15 @@ socket.on('message', function (message) {
 	$message.append('<p class="small animated fadeInUp"><strong>' 
 		+ momentTimestamp.local().format('h:mm:ssa') 
 		+ ' [' +  message.name + '] </strong><br>' + message.text + '</p>');
+
+	// COLORS room easter egg :]
+	if (room.trim() === 'COLORS') {
+		$('.messages > p').css('-webkit-animation', 'rainbow 10s infinite');
+	} 
 });
 
 // handles submission of new message
 var $form = jQuery('#message-form');
-var $button = jQuery('#form-submit-button');
-var $input = $('input');
 
 $form.on('submit', function (event) {
 	event.preventDefault();
@@ -47,6 +50,4 @@ $form.on('submit', function (event) {
 
 	$message.val('');
 
-	// scroll div upwards IF form submit field is below window
-	// console.log($button.isOnScreen())
 });
