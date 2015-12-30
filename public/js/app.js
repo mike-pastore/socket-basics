@@ -32,6 +32,9 @@ socket.on('message', function (message) {
 	// COLORS room easter egg :]
 	if (room.trim() === 'COLORS') {
 		$('.messages > p').css('-webkit-animation', 'rainbow 10s infinite');
+		$('.messages > p').css('-ms-animation', 'rainbow 10s infinite');
+		$('.messages > p').css('-o-animation', 'rainbow 10s infinite');
+		$('.messages > p').css('animation', 'rainbow 10s infinite');
 	} 
 });
 
