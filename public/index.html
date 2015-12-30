@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="/css/kube.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/animate.css">
 </head>
 <body>
 
@@ -23,28 +24,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="vertical-center">
 	<row centered>
 		<column cols="4">
-			<h1 class="title">Join Chat</h1>
+			<h1 class="title wow fadeInUp">Join Chat</h1>
 
 			<form class="forms" action="/chat.html">
 				<section>
-					<label for="name">Your Display Name</label>
-					<div class="input-prepend">
+					<label for="name"  class="wow fadeInUp" data-wow-delay="0.25s">Your Display Name</label>
+					<div class="input-prepend wow fadeInUp" data-wow-delay="0.5s">
 				        <span><i class="fa fa-user"></i></span>
 				        <input type="text" name="name" value="" autocomplete="off" placeholder="Name"/>
 				    </div>
 
-				    <label for="room" id="room-label">Chatroom Name <span class="desc smaller">~Try COLORS~</span></label>
-					<div class="input-prepend">
+				    <label for="room" id="room-label" class="wow fadeInUp" data-wow-delay="0.75s">Chatroom Name <span class="desc smaller wow pulse" data-wow-delay="1.5s" data-wow-iteration="infinite">~Try COLORS~</span></label>
+					<div class="input-prepend wow fadeInUp" data-wow-delay="1s">
 				        <span><i class="fa fa-comment"></i></span>
 				        <input type="text" name="room" value="" autocomplete="off" placeholder="Room"/>
 				    </div>
 				</section>
-				<button type="primary" class="width-12">Join Chat</button>
+				<button type="primary" class="width-12 wow fadeInUp" data-wow-delay="1.25s">Join Chat</button>
 			</form>
 		</column>
 	</row>
 	</div>
 
 	<script src="/js/stripScripts.js"></script>
+	<script src="/js/wow.min.js"></script>
+	<script>
+    	new WOW().init();
+   	</script>
 </body>
 </html>
