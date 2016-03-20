@@ -25,9 +25,14 @@ socket.on('message', function (message) {
 	console.log('New message:');
 	console.log(message.text);
 
-	$message.append('<p class="small animated fadeInUp"><strong>' 
-		+ momentTimestamp.local().format('h:mm:ssa') 
-		+ ' [' +  message.name + '] </strong><br>' + message.text + '</p>');
+	// $message.append('<p class="small animated fadeInUp"><strong>' 
+	// 	+ momentTimestamp.local().format('h:mm:ssa') 
+	// 	+ ' [' +  message.name + '] </strong><br>' + message.text + '</p>');
+
+	$message.append('<p class="small animated fadeInUp"><strong>'
+		+ message.name + '</strong><br>'
+		+ message.text + '<br><span class="smaller" style="color: #aaaaaa">'
+		+ momentTimestamp.local().format('h:mm:ssa') + '</span></p>');
 
 	// COLORS room easter egg :]
 	if (room.trim() === 'COLORS') {
